@@ -1,5 +1,0 @@
-module calculate
-typeinfo appcalculate.qmltypes
-prefer :/qt/qml/calculate/
-Main 1.0 Main.qml
-
