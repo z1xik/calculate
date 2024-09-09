@@ -1,6 +1,7 @@
 #include "calculator.h"
 #include "validator.h"
 
+
 namespace {
     int add(int lhs,int rhs){
         return lhs + rhs;
@@ -9,8 +10,7 @@ namespace {
         return lhs - rhs;
     }
     int div(int lhs,int rhs){
-        if (rhs == 0)
-            return 1;
+
         return lhs / rhs;
     }
     int mul(int lhs,int rhs){
@@ -48,6 +48,8 @@ QString Calculator::calculate(const QString &input)
     if (valid_string[1]!='+' and valid_string[1]!='-' and valid_string[1]!='*' and valid_string[1]!='/' )
         return "BAN2.0";
 
+    // if (valid_string[1] == '/' and valid_string[3] == 0)
+    //     return "ban div";
 
     int result = operation[valid_string[1]](lhs,rhs);
 
